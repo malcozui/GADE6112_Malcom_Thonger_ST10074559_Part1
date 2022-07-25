@@ -25,7 +25,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             this.y = y;
         }
 
-        public int X { get => x; set => value = x; }
-        public int Y { get => y; set => value = y; }
+        public int X { get => x; set => x = value; }
+        public int Y { get => y; set => y = value; }
     }
 }

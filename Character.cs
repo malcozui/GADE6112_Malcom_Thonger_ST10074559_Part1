@@ -12,6 +12,8 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         protected int maxHp;
         protected int dmg;
         protected TileType[] cardinalTiles = new TileType[4];
+        protected char symbol;
+
         public enum Movement
         {
             Up,
@@ -20,20 +22,25 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             Right,
             NoMovement
         }
-        public Character(int x, int y, int hp, int maxHp, int dmg) 
+        public Character(int x, int y, int hp, int maxHp, int dmg, char symbol) 
             :base(x, y)
         {
             this.hp = hp;
             this.maxHp = maxHp;
             this.dmg = dmg;
+            this.symbol = symbol;
         }
+
+        public int HP { get => hp; set => hp = value; }
+        public char Symbol { get => symbol; }
+        
 
         public virtual void Attack(Character target)
         {
             target.hp -= dmg;
         }
 
-        public bool IsDead() => (hp <= 0);
+        public bool IsDead() => (hp <= 0); //a lambda expression to return whether the player is dead or not.
 
         public virtual bool CheckRange(Character target)
         {
@@ -42,6 +49,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
 
         private int DistanceTo(Character target)
         {
+            //takes the absolute differnece in x and y and adds them for total distance
             int xDif = Math.Abs(target.x - x);
             int yDif = Math.Abs(target.y - y);
             return xDif + yDif;
