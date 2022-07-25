@@ -25,13 +25,32 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             {
                 for (int j = 0; j < mapHeight; j++)
                 {
-                    if (i == 0 || i == mapWidth - 1) map[i, j] = new Obstacle(i, j);
-                    else if (j == 0 || j == mapHeight - 1) map[i, j] = new Obstacle(i, j);
-                    else map[i, j] = new EmptyTile(i, j);
+                    if (i == 0 || i == mapWidth - 1)
+                    {
+                        map[i, j] = new Obstacle(i, j);
+                        map[i, j].Type = Tile.TileType.Obstacle;
+                    }
+                    else if (j == 0 || j == mapHeight - 1)
+                    {
+                        map[i, j] = new Obstacle(i, j);
+                        map[i, j].Type = Tile.TileType.Obstacle;
+                    }
+                    else
+                    {
+                        map[i, j] = new EmptyTile(i, j);
+                        map[i, j].Type = Tile.TileType.EmptyTile; 
+                    }
                 }
             }
-
             enemies = new Enemy[enemyCount];
+
+            Create(Tile.TileType.Hero);
+            for (int i = 0; i < enemyCount; i++)
+            {
+                Create(Tile.TileType.Enemy);
+            }
+
+            UpdateVision();
         }
 
         #region Properties
@@ -46,14 +65,28 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         public void UpdateVision()
         {
             //Hero vision
-            hero.CardinalTiles
-            //Enemies Vision
+            Tile.TileType[] tmp = new Tile.TileType[4];
+            tmp[0] = map[hero.X, hero.Y + 1].Type; //up
+            tmp[1] = map[hero.X, hero.Y - 1].Type; //down
+            tmp[2] = map[hero.X - 1, hero.Y].Type; //left
+            tmp[3] = map[hero.X + 1, hero.Y].Type; //right
+            hero.CardinalTiles = tmp;
 
+            //Enemies Vision
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                Tile.TileType[] enemiesTmp = new Tile.TileType[4];
+                enemiesTmp[0] = map[enemies[i].X, enemies[i].Y + 1].Type; //up
+                enemiesTmp[1] = map[enemies[i].X, enemies[i].Y - 1].Type; //down
+                enemiesTmp[2] = map[enemies[i].X - 1, enemies[i].Y].Type; //left
+                enemiesTmp[3] = map[enemies[i].X + 1, enemies[i].Y].Type; //right
+                enemies[i].CardinalTiles = enemiesTmp;
+            }
         }
 
         private void Create(Tile.TileType type)
         {
-            bool loop = false;
+            bool loop;
             int rndmX, rndmY;
             do
             {
@@ -62,6 +95,20 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
 
                 loop = (map[rndmX, rndmY] is null || map[rndmX, rndmY] == null);
             } while (loop);
+            switch (type)
+            {
+                case Tile.TileType.Hero:
+                    hero.X = rndmX;
+                    hero.Y = rndmY;
+                    map[rndmX, rndmY] = hero;
+                    map[rndmX, rndmY].Type = type;
+                    break;
+                case Tile.TileType.Enemy:
+                    map[rndmX, rndmY] = new SwampCreature(rndmX, rndmY, 10, 10, 1, '〠') { Type = type };
+                    break;
+                default:
+                    break;
+            }
         }
         #endregion
     }
