@@ -35,14 +35,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         public int MaxHP { get => maxHp; set => maxHp = value; }
         public int Dmg { get => dmg; set => dmg = value; }
         public char Symbol { get => symbol; }
-        public TileType[] CardinalTiles 
-        { 
-            get => cardinalTiles; 
-            set 
-            { 
-                
-            }
-        }
+        public TileType[] CardinalTiles { get => cardinalTiles; set => cardinalTiles = value; }
 
 
         public virtual void Attack(Character target)

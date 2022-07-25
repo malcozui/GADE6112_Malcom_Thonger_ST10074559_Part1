@@ -9,8 +9,8 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
     abstract class Enemy : Character
     {
         protected Random randomiser;
-        protected Enemy(int x, int y, int hp, int maxHp, int dmg)
-            : base(x, y, hp, maxHp, dmg)
+        protected Enemy(int x, int y, int hp, int maxHp, int dmg, char symbol)
+            : base(x, y, hp, maxHp, dmg, symbol)
         {
             
         }
