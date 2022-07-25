@@ -8,7 +8,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
 {
     internal class EmptyTile : Tile
     {
-        public EmptyTile(int x, int y, TileType tileType) : base(x, y, tileType)
+        public EmptyTile(int x, int y) : base(x, y)
         {
 
         }

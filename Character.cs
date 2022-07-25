@@ -20,8 +20,8 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             Left,
             Right
         }
-        public Character(int x, int y, TileType tileType, int hp, int maxHp, int dmg) 
-            :base(x, y, tileType)
+        public Character(int x, int y, int hp, int maxHp, int dmg) 
+            :base(x, y)
         {
             this.hp = hp;
             this.maxHp = maxHp;
