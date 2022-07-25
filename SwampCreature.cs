@@ -15,9 +15,30 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             dmg = 1;
         }
 
-        public override Movement ReturnMove(Movement move = Movement.NoMovement)
+        public override Movement ReturnMove(Movement movement = 0)
         {
-            throw new NotImplementedException();
+            Random rndm = new Random();
+            bool loop = false;
+            do
+            {
+                int dir = rndm.Next(4);
+                switch (dir)
+                {
+                    case 0:
+                        if (cardinalTiles[0] == TileType.Hero)
+                        return Movement.Up;
+                    case 1:
+                        return Movement.Down;
+                    case 2:
+                        return Movement.Left;
+                    case 3:
+                        return Movement.Right;
+                    default:
+                        //Will never be called but the compiler throws an
+                        //"not all code paths return a value" error if i dont add this
+                        return Movement.NoMovement;
+                }
+            } while (loop);
         }
     }
 }

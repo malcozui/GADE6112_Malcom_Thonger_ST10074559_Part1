@@ -11,7 +11,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         protected int hp;
         protected int maxHp;
         protected int dmg;
-        protected Tile[] cardinalTiles = new Tile[4];
+        protected TileType[] cardinalTiles = new TileType[4];
         public enum Movement
         {
             NoMovement,
