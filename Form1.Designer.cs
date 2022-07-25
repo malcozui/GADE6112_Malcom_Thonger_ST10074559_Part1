@@ -1,6 +1,6 @@
 ﻿namespace GADE6112_Malcom_Thonger_ST10074559_Part1
 {
-    partial class Form1
+    partial class TheGameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.gameLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // gameLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(171, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 104);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "XXXXXXXXXXXXXXX \r\nX......SC.....X \r\nX......SC.....X \r\nX.............X \r\nX....SC.S" +
+            this.gameLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.gameLbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gameLbl.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.gameLbl.Location = new System.Drawing.Point(265, 96);
+            this.gameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gameLbl.Name = "gameLbl";
+            this.gameLbl.Size = new System.Drawing.Size(274, 247);
+            this.gameLbl.TabIndex = 0;
+            this.gameLbl.Text = "XXXXXXXXXXXXXXX \r\nX......SC.....X \r\nX......SC.....X \r\nX.............X \r\nX....SC.S" +
     "C....X \r\nX.....SCH.....X \r\nX.............X \r\nXXXXXXXXXXXXXXX \r\n";
             // 
-            // Form1
+            // TheGameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.ClientSize = new System.Drawing.Size(789, 484);
+            this.Controls.Add(this.gameLbl);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "TheGameForm";
+            this.Text = "The Game!";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label gameLbl;
     }
 }
 

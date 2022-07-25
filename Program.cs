@@ -16,7 +16,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new TheGameForm());
         }
     }
 }
