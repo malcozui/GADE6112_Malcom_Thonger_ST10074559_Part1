@@ -15,7 +15,9 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             Hero,
             Enemy,
             Gold,
-            Weapon
+            Weapon,
+            EmptyTile,
+            Obstacle
         }
         public Tile(int x, int y)
         {

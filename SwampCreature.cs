@@ -25,7 +25,10 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
                 switch (dir)
                 {
                     case 0:
-                        if (cardinalTiles[0] == TileType.Hero)
+                        if (cardinalTiles[0] != EmptyTile)
+                        {
+
+                        }
                         return Movement.Up;
                     case 1:
                         return Movement.Down;
