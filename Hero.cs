@@ -16,12 +16,16 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
 
         public override Movement ReturnMove(Movement move = Movement.NoMovement)
         {
-            throw new NotImplementedException();
+            if (move == Movement.NoMovement) return Movement.NoMovement;
+
+            //checks if the tile in the cardinal direction is empty, if it is, it returns the given movement, else it returns no movement
+            if (cardinalTiles[(int)move] != TileType.EmptyTile) return Movement.NoMovement;
+            else return move;
         }
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return $"Player Stats: \nHP: {hp}/{maxHp} \nDamage: {dmg} \n[{x},{y}]";
         }
     }
 }

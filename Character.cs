@@ -14,11 +14,11 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         protected TileType[] cardinalTiles = new TileType[4];
         public enum Movement
         {
-            NoMovement,
             Up,
             Down,
             Left,
-            Right
+            Right,
+            NoMovement
         }
         public Character(int x, int y, int hp, int maxHp, int dmg) 
             :base(x, y)
@@ -51,17 +51,17 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         {
             switch (move)
             {
-                case Movement.Left:
-                    x -= 1;
-                    break;
-                case Movement.Right:
-                    x += 1;
-                    break;
                 case Movement.Up:
                     y += 1;
                     break;
                 case Movement.Down:
                     y -= 1;
+                    break;
+                case Movement.Left:
+                    x -= 1;
+                    break;
+                case Movement.Right:
+                    x += 1;
                     break;
                 case Movement.NoMovement:
                     break;
