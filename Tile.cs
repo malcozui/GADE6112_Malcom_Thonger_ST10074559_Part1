@@ -12,7 +12,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         protected int y;
         public enum TileType
         {
-            Hero = 1,
+            Hero,
             Enemy,
             Gold,
             Weapon
