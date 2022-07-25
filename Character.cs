@@ -31,15 +31,19 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             this.symbol = symbol;
         }
 
-        public Character(int x, int y, int hp, int maxHp, int dmg) : base(x, y)
-        {
-        }
-
         public int HP { get => hp; set => hp = value; }
         public int MaxHP { get => maxHp; set => maxHp = value; }
         public int Dmg { get => dmg; set => dmg = value; }
         public char Symbol { get => symbol; }
-        
+        public TileType[] CardinalTiles 
+        { 
+            get => cardinalTiles; 
+            set 
+            { 
+                
+            }
+        }
+
 
         public virtual void Attack(Character target)
         {
