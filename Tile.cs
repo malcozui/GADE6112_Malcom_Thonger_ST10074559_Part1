@@ -21,7 +21,6 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         {
             this.x = x;
             this.y = y;
-
         }
 
         protected int X { get => x; set => value = x; }
