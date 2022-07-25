@@ -25,7 +25,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
                 switch (dir)
                 {
                     case 0:
-                        if (cardinalTiles[0] != EmptyTile)
+                        if (cardinalTiles[0] != TileType.EmptyTile)
                         {
 
                         }
