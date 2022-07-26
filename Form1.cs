@@ -19,8 +19,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
 
         void Func()
         {
-            var obs = new Obstacle(0, 0);
-            var empty = new EmptyTile(0, 1);
+            
             
         }
     }
