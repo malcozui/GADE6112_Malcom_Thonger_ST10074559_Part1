@@ -30,6 +30,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             this.dmg = dmg;
             this.symbol = symbol;
         }
+
         #region Properties
         public int HP { get => hp; set => hp = value; }
         public int MaxHP { get => maxHp; set => maxHp = value; }
