@@ -24,9 +24,10 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             this.x = x;
             this.y = y;
         }
-
+        #region properties
         public int X { get => x; set => x = value; }
         public int Y { get => y; set => y = value; }
         public TileType Type { get; set; }
+        #endregion
     }
 }

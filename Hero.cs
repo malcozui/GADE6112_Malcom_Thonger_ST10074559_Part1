@@ -13,7 +13,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         {
 
         }
-
+        #region Methods
         public override Movement ReturnMove(Movement move = Movement.NoMovement)
         {
             if (move == Movement.NoMovement) return Movement.NoMovement;
@@ -27,5 +27,6 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         {
             return $"Player Stats: \nHP: {hp}/{maxHp} \nDamage: {dmg} \n[{x},{y}]";
         }
+        #endregion
     }
 }
