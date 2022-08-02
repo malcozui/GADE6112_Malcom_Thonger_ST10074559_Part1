@@ -16,6 +16,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         
         public Map(int minWidth, int maxWidth, int minHeight, int maxHeight, int enemyCount)
         {
+            hero = new Hero(5, 5, 100, 100, 1);
             mapWidth = rndm.Next(minWidth, maxWidth);
             mapHeight = rndm.Next(minHeight, maxHeight);
 
@@ -104,7 +105,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
                     map[rndmX, rndmY].Type = type;
                     break;
                 case Tile.TileType.Enemy:
-                    map[rndmX, rndmY] = new SwampCreature(rndmX, rndmY, 10, 10, 1, '〠') { Type = type };
+                    map[rndmX, rndmY] = new SwampCreature(rndmX, rndmY, 10, 10, 1) { Type = type };
                     break;
                 default:
                     break;

@@ -17,10 +17,10 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             InitializeComponent();
         }
 
-        void Func()
+        private void button1_Click(object sender, EventArgs e)
         {
-            
-            
+            var gameEngine = new GameEngine();
+            gameLbl.Text = gameEngine.ToString();
         }
     }
 }

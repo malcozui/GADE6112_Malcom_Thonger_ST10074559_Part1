@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gameLbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gameLbl
@@ -44,12 +45,23 @@
             this.gameLbl.Text = "XXXXXXXXXXXXXXX \r\nX......SC.....X \r\nX......SC.....X \r\nX.............X \r\nX....SC.S" +
     "C....X \r\nX.....SCH.....X \r\nX.............X \r\nXXXXXXXXXXXXXXX \r\n";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(265, 384);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 27);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TheGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(789, 484);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.gameLbl);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -62,6 +74,7 @@
         #endregion
 
         private System.Windows.Forms.Label gameLbl;
+        private System.Windows.Forms.Button button1;
     }
 }
 
