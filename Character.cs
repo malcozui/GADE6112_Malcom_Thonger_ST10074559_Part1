@@ -12,7 +12,7 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         protected int maxHp;
         protected int dmg;
         protected TileType[] cardinalTiles = new TileType[4];
-        protected char symbol;
+        
 
         public enum Movement
         {
@@ -22,13 +22,12 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             Right,
             NoMovement
         }
-        public Character(int x, int y, int hp, int maxHp, int dmg, char symbol) 
+        public Character(int x, int y, int hp, int maxHp, int dmg) 
             :base(x, y)
         {
             this.hp = hp;
             this.maxHp = maxHp;
             this.dmg = dmg;
-            this.symbol = symbol;
         }
 
         #region Properties
