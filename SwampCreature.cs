@@ -15,9 +15,8 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
             dmg = 1;
         }
 
-        public override Movement ReturnMove(Movement movement = 0)
+        public override Movement ReturnMove(Movement movement = Movement.NoMovement)
         {
-            
             bool loop = false;
             int dir;
             do
