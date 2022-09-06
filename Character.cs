@@ -13,7 +13,6 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
         protected int dmg;
         protected TileType[] cardinalTiles = new TileType[4];
         
-
         public enum Movement
         {
             Up,

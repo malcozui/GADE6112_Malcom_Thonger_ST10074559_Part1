@@ -17,12 +17,12 @@ namespace GADE6112_Malcom_Thonger_ST10074559_Part1
 
         public override Movement ReturnMove(Movement movement = 0)
         {
-            Random rndm = new Random();
+            ;
             bool loop = false;
             int dir;
             do
             {
-                dir = rndm.Next(4);
+                dir = randomiser.Next(4);
                 if (cardinalTiles[dir] != TileType.EmptyTile)
                 {
                     loop = true;
